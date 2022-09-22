@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    color: white;
+    background-color: #6943FF;
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+#convert-input {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.converter {
+    width: 90%;
+    text-align: center;
+    color: #353535;
+    background-color: #FFFFFF;
+}
+
+#converter-container {
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px pink;
+}
