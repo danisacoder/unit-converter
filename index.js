@@ -20,16 +20,27 @@ convertInput.addEventListener('change', function() {
     console.log(convertValue)
 })
 
+convertInput.addEventListener('keypress', function(event){
+    if (event.key === "Enter") {
+        event.preventDefault()
+        convertFunction()
+    }
+})
+
 // Set the values of all of the div paragraphs to reflect 
 
 convertBtn.addEventListener('click', function() {
-    // console.log('hello')
+    convertFunction()
+})
 
+function convertFunction() {
+
+    convertValue = convertInput.value
+    
     lengthP.textContent = `${convertValue} meters = ${(convertValue * 3.281).toFixed(3)} feet | ${convertValue} feet = ${(convertValue / 3.281).toFixed(3)} meters`
 
     volumeP.textContent = `${convertValue} liters = ${(convertValue * .264).toFixed(3)} gallons | ${convertValue} gallons = ${(convertValue / .264).toFixed(3)} liters`
 
     massP.textContent = ` ${convertValue} kilograms = ${(convertValue * 2.204).toFixed(3)} pounds | ${convertValue} pounds = ${(convertValue / 2.204).toFixed(3)} kilos`
 
-})
-
+}
