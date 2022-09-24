@@ -31,19 +31,29 @@ convertInput.addEventListener('keypress', function(event){
 // Set the values of all of the div paragraphs to reflect number
 
 convertBtn.addEventListener('click', function() {
-    if (convertValue === "") {} else {
-        convertFunction()
-    }
+       
+    convertFunction()
+
 })
 
 function convertFunction() {
 
-    convertValue = convertInput.value
+    if (convertInput.value === "") {
+
+        lengthP.textContent = "meters | feet"
+        volumeP.textContent = "liters | gallons"
+        massP.textContent = "kilos | pounds"
+
+    } else {
     
-    lengthP.textContent = `${convertValue} meters = ${(convertValue * 3.281).toFixed(3)} feet | ${convertValue} feet = ${(convertValue / 3.281).toFixed(3)} meters`
+        convertValue = convertInput.value
+        
+        lengthP.textContent = `${convertValue} meters = ${(convertValue * 3.281).toFixed(3)} feet | ${convertValue} feet = ${(convertValue / 3.281).toFixed(3)} meters`
 
-    volumeP.textContent = `${convertValue} liters = ${(convertValue * .264).toFixed(3)} gallons | ${convertValue} gallons = ${(convertValue / .264).toFixed(3)} liters`
+        volumeP.textContent = `${convertValue} liters = ${(convertValue * .264).toFixed(3)} gallons | ${convertValue} gallons = ${(convertValue / .264).toFixed(3)} liters`
 
-    massP.textContent = ` ${convertValue} kilograms = ${(convertValue * 2.204).toFixed(3)} pounds | ${convertValue} pounds = ${(convertValue / 2.204).toFixed(3)} kilos`
+        massP.textContent = ` ${convertValue} kilograms = ${(convertValue * 2.204).toFixed(3)} pounds | ${convertValue} pounds = ${(convertValue / 2.204).toFixed(3)} kilos`
+    
+    }
 
 }
