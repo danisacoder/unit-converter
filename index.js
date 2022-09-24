@@ -24,6 +24,7 @@ convertInput.addEventListener('change', function() {
 convertInput.addEventListener('keypress', function(event){
     if (event.key === "Enter") {
         event.preventDefault()
+        convertValue = convertInput.value
         convertFunction()
     }
 })
@@ -31,7 +32,7 @@ convertInput.addEventListener('keypress', function(event){
 // Set the values of all of the div paragraphs to reflect number
 
 convertBtn.addEventListener('click', function() {
-       
+    convertValue = convertInput.value
     convertFunction()
 
 })
@@ -45,8 +46,6 @@ function convertFunction() {
         massP.textContent = "kilos | pounds"
 
     } else {
-    
-        convertValue = convertInput.value
         
         lengthP.textContent = `${convertValue} meters = ${(convertValue * 3.281).toFixed(3)} feet | ${convertValue} feet = ${(convertValue / 3.281).toFixed(3)} meters`
 
