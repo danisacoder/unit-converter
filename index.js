@@ -6,7 +6,6 @@
 
 const convertInput = document.getElementById('convert-input')
 const convertBtn = document.getElementById('convert-btn')
-// convertInput.defaultValue = 20
 let convertValue = convertInput.value
 
 const lengthP = document.getElementById('length-p')
@@ -20,6 +19,8 @@ convertInput.addEventListener('change', function() {
     console.log(convertValue)
 })
 
+// Convert Enter key press in text field into conver button press
+
 convertInput.addEventListener('keypress', function(event){
     if (event.key === "Enter") {
         event.preventDefault()
@@ -27,10 +28,12 @@ convertInput.addEventListener('keypress', function(event){
     }
 })
 
-// Set the values of all of the div paragraphs to reflect 
+// Set the values of all of the div paragraphs to reflect number
 
 convertBtn.addEventListener('click', function() {
-    convertFunction()
+    if (convertValue === "") {} else {
+        convertFunction()
+    }
 })
 
 function convertFunction() {

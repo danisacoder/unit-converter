@@ -1,37 +1,40 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
     color: white;
     background-color: #6943FF;
-    /* display: flex;
-    flex-direction: column; */
     text-align: center;
-    padding: 40px;
+    padding: 45px;
 }
 
 h1 {
     font-weight: 900;
     margin: 0;
-    padding: 0 0 35px 0;
+    padding: 0 0 45px 0;
+    text-shadow: 0 0 4px black;
 }
 
 #convert-input {
-    /* display: block; */
-    margin: 0 auto 25px auto;
-    /* padding-bottom: 10px; */
+    margin: 0 auto 33px auto;
     background-color: #6943FF;
     border: 2px solid #B295FF;
-    border-radius: 5px;
+    border-radius: 6px;
     width: 140px;
     height: 100px;
     color: white;
-    font-size: 70px;
+    font-size: 67px;
     font-weight: 900;
     text-align: center;
-
 }
 
 /* Hide input buttons, they're ugly */
@@ -48,30 +51,45 @@ input::-webkit-inner-spin-button {
     }
 
 button {
+    width: 140px;
     display: block;
     margin: auto;
-    padding: 15px 35px;
+    padding: 15px 0;
     border-radius: 5px;
     border: none;
+    font-size: 1.25em;
 }
 
 h2 {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.converter {
-    width: 90%;
-    text-align: center;
-    color: #353535;
-    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+    color:#5A537B;
 }
 
 #converter-container {
     background-color: #F4F4F4;
+   
+    /* This is to fill the remaining space */
+    flex: 1;
+
+    /* This is for the sub-items within */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 1px pink;
+    flex-direction: column;    
+    /* align-items: center; */
+    justify-content: center;
+    padding: 35px 30px;
+}
+
+.converter-box {
+    text-align: center;
+    color: #353535;
+    background-color: #FFFFFF;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-top-left-radius: 5px;
+}
+
+.converter-box p {
+    font-size: 1.1em;
 }
 
